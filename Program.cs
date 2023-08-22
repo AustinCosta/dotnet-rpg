@@ -10,6 +10,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//Register Auto Mapper
+builder.Services.AddAutoMapper(typeof(Program).Assembly);
+
 //Register the character service
 //Now the web api knows it has to use the CharacterService class whenever a controller wants to inject
 //the ICharacterService
